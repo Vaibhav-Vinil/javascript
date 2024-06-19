@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROCK PAPER SCISSORS!</title>
+</head>
+<link rel="stylesheet" href="styles.css"/>
+
+<body>
+<h1>ROCK PAPER SCISSORS !</h1>
+<!--rock>2/3    paper>1/3  else scissor-->
+<div class="button-container">
+<button onclick="play('rock')">ROCK</button>
+<button onclick="play('paper')">PAPER</button>
+<button onclick="play('scissors')">SCISSORS</button>
+</div>  
+
+<script>
+function play(choice){
+let opponent=Math.random();
+let result;
+let opponentchoice;
+
+    if (opponent>2/3){
+        //rock
+        opponentchoice="rock"
+        console.log("opponent chose rock");
+        if(choice=="rock"){ result="TIE";}
+        else if(choice=="paper"){ result="YOU WIN";}
+        else{result="YOU LOSE";}   
+    }
+    else if (opponent>1/3){
+        //paper
+        opponentchoice="paper"
+        console.log("opponent chose paper");
+        if(choice=="paper"){ result="TIE";}
+        else if(choice=="scissors"){ result="YOU WIN";}
+        else{ result="YOU LOSE";}  
+    }
+    else {
+        //scissors
+        opponentchoice="scissors"
+        console.log("opponent chose scissors");
+        if(choice=="scissors"){ result="TIE";}
+        else if(choice=="rock"){ result="YOU WIN";}
+        else{ result="YOU LOSE";}   
+    }
+
+alert(result + " opponent chose " + opponentchoice.toUpperCase());
+}
+
+</script>
+    
+</body>
+</html>
